@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<body style="font-family: 'Comic Sans MS', 'Comic Sans', cursive; background-image: url(./windowsxp.jpg); background-size: cover;">
+
+    <!-- welcome screen for the os -->  
+    <div id="welcomescreen" style="width: 500px; height: 210px; border-radius: 20px; padding: 10px; position: absolute; top: 50%; left: 50%; border: 2px solid black; transform: translate(-50%, -50%); background-color: rgb(117, 206, 218);">
+
+        <body style=" font-family: 'Comic Sans MS', 'Comic Sans', cursive;"> 
+                <p style="cursor: pointer; font-size: 10px;" id="welcomeclose">Close</p>
+                <h1 style="text-align: left; font-size: 40px;">FriendOS</h1>
+                <h2 style="text-align: left; font-size: 15px;">    '   </h2>
+                <p>Maybe the real friends we made along the way is the os or not but all i know is that this os is infested with brainrot</p>
+                <img style="position:absolute; left:270px; top: 4px; width: 200px; height: 150px; border-radius: 20px; object-fit: cover;" src="me.jpg" alt="My project image" />
+                <a href="https://www.instagram.com/yadadumpy/">?</a>
+
+        </body>
+
+    </div>
+
+
+
+    <!-- top bar of the os -->
+    <div style=" display: flex;     
+    justify-content: center; gap: 1200px ; 
+    position:absolute; width: 100%; 
+    background-color: #FFFDD0; 
+    align-items: top; border-radius: 20px;">
+
+
+        <p style="cursor: pointer;" id="welcomeopen">                     
+            FriendOS
+        </p>
+        <p id="timeElement"
+            style="font-size: 16px;">
+            time
+        </p>
+    </div>
+
+    <!--Scripts-->
+    <body>
+            <script src="scripts.js"></script> #connectes to the scripts.js file
+
+            <script>
+
+                function updateTime() {
+                var currentTime = new Date().toLocaleString();
+                var timeText = document.querySelector("#timeElement");
+                timeText.innerHTML = currentTime
+                }
+                setInterval(updateTime, 1000);
+            </script>
+
+            <style>
+                .app{
+                    display: inline-block;
+                }
+                .selected {
+                    border: 2px solid black;
+                    background-color: rgba(255,255,255,0.4);
+                    border-radius: 10px;
+                    padding: 5px;
+                }
+                .window {
+                    position: absolute;
+                    border-radius: 20px;
+                    border: 2px solid black;
+                    background-color: rgb(117, 206, 218);
+                    padding: 10px;
+
+                }
+                .taped{
+                    z-index: var(--biggest-z-index, 1);
+                }
+                .windowheader { 
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: move;
+                }
+                .closebutton {
+                    width: 16px;
+                    height: 16px;
+                    background-color: red;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                .headertext {
+                    font-size: 16px;
+                    margin: 0;
+                }
+
+
+
+            </style>
+
+
+
+    </body>
+
+    <!--App-->
+    <div id="desktopapp" style="padding-top: 64px; padding-left: 16px;">
+
+        <div class="app" id="craftMine" width="64px">
+            
+            <img src="minecraft.png" style="width: 64px; height: 64px;">
+            <p style="font-size: 15px;">craftMine</p>
+
+        </div>
+
+        <div class="app" id="notes" width="64px">
+            
+            <img src="notes.png" style="width: 64px; height: 64px;">
+            <p style="font-size: 15px;">Notes</p>
+
+        </div>
+
+
+        <div id="notesWindow"
+            style=" display: none; width: 1400px; height: 650px; border-radius: 20px; padding: 10px; position: absolute; top: 50%; left: 50%; border: 2px solid black; transform: translate(-50%, -50%); background-color: rgb(117, 206, 218);">
+            
+            <div class="windowheader" id="notesWindowheader">
+                
+                <div class="closebutton" id="notesWindowclose"></div>
+                <p class="headertext">Notes</p>
+                <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
+            
+            </div>
+            <div style="display: flex; height: 550px;">
+                <div id="sidebar" style="background-color: rgb(144, 215, 225); width: 200px; height: 600px;" align:left >       
+                <h1> Notes selector </h1>
+                <button id="addnote"> New Note </button>
+                </div>
+
+                <div id= "notescontent" align-content="left"; style="margin: 6px; border-radius: 12px; width: 1160px; height: 550px; padding: 16px;">
+                    
+                    <h1>Notes</h1>
+                    start typing your notes here...
+                </div>
+            </div>
+        </div>
+
+
+        <div id="craftMineWindow"
+            style="display: none; width: 1400px; height: 650px; border-radius: 20px; padding: 10px; position: absolute; top: 50%; left: 50%; border: 2px solid black; transform: translate(-50%, -50%); background-color: rgb(117, 206, 218);">
+            <div class="windowheader" id="craftMineWindowheader">
+                <div class="closebutton" id="craftMineWindowclose"></div>
+                <p class="headertext">craftMine</p>
+                <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
+            </div>
+            <div style="margin: 6px; border-radius: 12px; width: 1360px; height: 550px; padding: 16px;">
+                <iframe src="https://scratch.mit.edu/projects/878465277/embed" width="1330" height="500" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
